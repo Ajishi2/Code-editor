@@ -1,4 +1,4 @@
-/* App.css */
+
 
 body {
   font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@ body {
   background-color: #f4f4f4;
 }
 #runBtn:hover {
-  background-color: #d81b60; /* A slightly darker shade of pink */
+  background-color: #d81b60; 
 }
 
 h1 {
