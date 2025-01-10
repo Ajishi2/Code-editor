@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Editor</title>
   <script>
-    // Listen for messages from iframe
+    
     window.addEventListener('message', (event) => {
       if (event.origin === 'https://onecompiler.com') {
         if (event.data.eventType === 'populateCode') {
@@ -14,7 +14,7 @@
       }
     });
 
-    // Trigger the Run action inside the iframe
+   
     function triggerRunCode() {
       const iframe = document.querySelector('iframe');
       iframe.contentWindow.postMessage({
@@ -22,7 +22,7 @@
       }, "*");
     }
 
-    // Trigger the Format action inside the iframe
+   
     function triggerFormatCode() {
       const iframe = document.querySelector('iframe');
       iframe.contentWindow.postMessage({
@@ -30,13 +30,13 @@
       }, "*");
     }
 
-    // Toggle theme
+    
     function toggleTheme() {
       const body = document.body;
       const icon = document.getElementById('icon');
       body.classList.toggle('dark-theme');
 
-      // Update icon
+     
       icon.innerHTML = body.classList.contains('dark-theme') ? '&#x2600;' : '&#x1F319;';
 
       // Store theme preference
@@ -45,14 +45,14 @@
       reloadIframe();
     }
 
-    // Reload iframe with theme
+    
     function reloadIframe() {
       const iframe = document.querySelector('iframe');
       const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
       iframe.src = `https://onecompiler.com/embed/javascript?listenToEvents=true&theme=${theme}`;
     }
 
-    // Load theme from localStorage
+ 
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'dark') {
@@ -69,26 +69,24 @@
     });
   </script>
   <style>
-    /* Global styles */
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       transition: background-color 0.3s, color 0.3s;
     }
 
-    /* Light theme */
+    
     body {
       background-color: #ecf0f1;
       color: black;
     }
 
-    /* Dark theme */
     .dark-theme {
       background-color: #121213;
       color: white;
     }
 
-    /* Header styles */
     header {
       background-color: #3498db;
       color: white;
@@ -108,7 +106,7 @@
       background-color: #1a1a1a;
     }
 
-    /* Header links */
+   
     .header-links {
       display: flex;
       gap: 20px;
@@ -122,12 +120,10 @@
       transition: color 0.3s ease;
     }
 
-    /* Hover effects for light theme */
     .header-links a:hover {
       color: #efeff0;
     }
 
-    /* Hover effects for dark theme */
     .dark-theme .header-links a {
       color: white;
     }
@@ -136,7 +132,7 @@
       color: #e91e63;
     }
 
-    /* Run and Format buttons */
+    
     #runBtn, #formatBtn {
       padding: 10px 20px;
       font-size: 16px;
@@ -172,13 +168,12 @@
       background-color: rgba(56, 71, 170, 255);
     }
 
-    /* Container layout */
     .container {
       margin-top: 80px;
       padding: 0 20px;
     }
 
-    /* Iframe */
+   
     iframe {
       width: 100%;
       height: 500px;
@@ -186,7 +181,7 @@
       margin-bottom: 20px;
     }
 
-    /* Theme toggle button */
+  
     #toggleThemeBtn {
       display: flex;
       align-items: center;
