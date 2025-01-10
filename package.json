@@ -1,0 +1,58 @@
+{
+  "name": "code-editor-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@monaco-editor/react": "^4.6.0",
+    "@mui/material": "^6.3.1",
+    "ace-builds": "^1.37.4",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "canvas-confetti": "^1.9.3",
+    "cra-template": "1.2.0",
+    "express": "^4.21.2",
+    "html-webpack-plugin": "^5.6.3",
+    "monaco-editor": "^0.36.1",
+    "react": "^18.3.1",
+    "react-ace": "^13.0.0",
+    "react-confetti": "^6.2.2",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "js-beautify": "^1.15.1",
+    "prettier": "^3.4.2",
+    "react-app-rewired": "^2.2.1",
+    "source-map-loader": "^5.0.0",
+    "standard": "^17.1.2",
+    "webpack": "^5.97.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
